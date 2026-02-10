@@ -11,23 +11,17 @@ Based on the output of the motion prediction, we present codes for DCPA and TCPA
 The code for sequence prediction is located in the `Ress_GLRP/` folder, while the main entry point is `main_run.py`. The training, testing, and prediction pipeline is implemented in `processor.py`, with data loading handled by `dataloader.py`. The core network architecture is defined in `GLRP.py`. Ablation studies for key components (VAE framework, graph network, and sequential structure) are provided in `Ablation_models.py`, and several baseline models (LSTM, GRU, Seq2Seq, TCN, Transformer) are included in `Compared_models.py`. Utility functions, mainly for metric calculation, are in `utils.py`, and a simple visualization script is in `visualization.py`. Outside this folder, the `D_TCPA.py` file is used for calculating ship-ship risk values based on the prediction results.
 
 
-## Environment Setup
+## Dependencies
 
-**System Requirements**
-
-- Operating System: Linux (Ubuntu 18.04+ recommended)
-- Python 3.8 or higher
-- CUDA 11.3+ (for GPU acceleration, optional)
-
-**Dependencies**
-
+- Python ==3.9
 - torch==2.8.0
 - numpy==2.0.1
 - pandas==2.3.3
+- torch-geometric==2.3.2
 - math==1.3.0
 - pytorch_tcn==1.2.3
-- matplotlib == 3.7.2
-- torch-geometric == 2.3.2
+- matplotlib==3.7.2
+
 
 ## Network Structure
 <img src="https://github.com/KaysenWB/RESS_GLRP/blob/main/Figures/Figure03.jpg?raw=true" width="95%" height="95%">
