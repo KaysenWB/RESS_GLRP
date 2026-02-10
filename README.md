@@ -8,25 +8,20 @@ Based on the output of the motion prediction, we present codes for DCPA and TCPA
 
 
 
-# Research problem
-integrating ship interactions to enhance motion prediction and risk perception performance.
+# Environment Setup
 
-![Figure](https://github.com/KaysenWB/SS-GLMP/blob/main/Figures/Figure01.jpg?raw=true)
+**System Requirements**
 
-# Overview of this work
-![Figure](https://github.com/KaysenWB/SS-GLMP/blob/main/Figures/Figure02.jpeg?raw=true)
+- Operating System: Linux (Ubuntu 18.04+ recommended)
+- Python 3.8 or higher
+- CUDA 11.3+ (for GPU acceleration, optional)
 
-# Network structure
-![Figure](https://github.com/KaysenWB/SS-GLMP/blob/main/Figures/Figure03.jpg?raw=true)
+**Dependencies**
 
-# Interactive learning based on graph networks and VAE architecture
-![Figure](https://github.com/KaysenWB/SS-GLMP/blob/main/Figures/Figure04.jpg?raw=true)
-
-# Motion prediction performance and comparison (Trajectory)
-![Figure](https://github.com/KaysenWB/SS-GLMP/blob/main/Figures/Figure08.jpeg?raw=true)
-
-# Motion prediction performance and comparison (SOG and COG)
-![Figure](https://github.com/KaysenWB/SS-GLMP/blob/main/Figures/Figure06.jpg?raw=true)
-
-# Risk perception performance and comparison (DCPA and TCPA)
-![Figure](https://github.com/KaysenWB/SS-GLMP/blob/main/Figures/Figure10.jpeg?raw=true)
+- torch==2.8.0
+- numpy==2.0.1
+- pandas==2.3.3
+- math==1.3.0
+- pytorch_tcn==1.2.3
+- matplotlib == 3.7.2
+- torch-geometric == 2.3.2
