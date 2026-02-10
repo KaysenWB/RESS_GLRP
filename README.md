@@ -8,7 +8,7 @@ Based on the output of the motion prediction, we present codes for DCPA and TCPA
 
 ## Code Description
 
-The code for sequence prediction is located in the **`Ress_GLRP/`** folder, while the main entry point is **`main_run.py`**. The training, testing, and prediction pipeline is implemented in **`processor.py`**, with data loading handled by **`dataloader.py`**. The core network architecture is defined in **`GLRP.py`**. Ablation studies for key components (VAE framework, graph network, and sequential structure) are provided in **`Ablation_models.py`**, and several baseline models (LSTM, GRU, Seq2Seq, TCN, Transformer) are included in **`Compared_models.py`**. Utility functions, mainly for metric calculation, are in **`utils.py`**, and a simple visualization script is in **`visualization.py`**. Outside this folder, the **`D_TCPA.py`** file is used for calculating ship-ship risk values based on the prediction results.
+The code for sequence prediction is located in the `Ress_GLRP/` folder, while the main entry point is `main_run.py`. The training, testing, and prediction pipeline is implemented in `processor.py`, with data loading handled by **`dataloader.py`. The core network architecture is defined in `GLRP.py`. Ablation studies for key components (VAE framework, graph network, and sequential structure) are provided in `Ablation_models.py`, and several baseline models (LSTM, GRU, Seq2Seq, TCN, Transformer) are included in `Compared_models.py`. Utility functions, mainly for metric calculation, are in `utils.py`, and a simple visualization script is in `visualization.py`. Outside this folder, the `D_TCPA.py` file is used for calculating ship-ship risk values based on the prediction results.
 
 
 ## Environment Setup
@@ -31,9 +31,11 @@ The code for sequence prediction is located in the **`Ress_GLRP/`** folder, whil
 
 ## Network Structure
 <img src="https://github.com/KaysenWB/RESS_GLRP/blob/main/Figures/Figure03.jpg?raw=true" width="95%" height="95%">
+The network structure of GLRP. Observable trajectories are first entered into the self-attention block, and features of the last timestep are entered into VGAE. Two layers of graph convolution are applied in the VGAE encoder, followed by variational inference to obtain latent variables. The latent space is sampled K times and input into the decoder, which generates the predicted sequence step by step by a GRU cell. Finally, Risk analysis is conducted based on the predictions.
 
 ## Result
-<img src="https://github.com/KaysenWB/RESS_GLRP/blob/main/Figures/Figure08.jpg?raw=true" width="95%" height="95%">
+<img src="https://github.com/KaysenWB/RESS_GLRP/blob/main/Figures/Figure08.jpeg?raw=true" width="95%" height="95%">
+Qualitative comparison of the trajectory prediction results of GLRP and compared other deep learning networks in a 32-32 step multi-ship encounter prediction. It displays the greater prediction ability of GLRP.
 
 
 ## Citation
