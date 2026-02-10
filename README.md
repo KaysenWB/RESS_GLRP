@@ -8,7 +8,7 @@ Based on the output of the motion prediction, we present codes for DCPA and TCPA
 
 ## Code Description
 
-The code for sequence prediction is located in the `Ress_GLRP/` folder, while the main entry point is `main_run.py`. The training, testing, and prediction pipeline is implemented in `processor.py`, with data loading handled by **`dataloader.py`. The core network architecture is defined in `GLRP.py`. Ablation studies for key components (VAE framework, graph network, and sequential structure) are provided in `Ablation_models.py`, and several baseline models (LSTM, GRU, Seq2Seq, TCN, Transformer) are included in `Compared_models.py`. Utility functions, mainly for metric calculation, are in `utils.py`, and a simple visualization script is in `visualization.py`. Outside this folder, the `D_TCPA.py` file is used for calculating ship-ship risk values based on the prediction results.
+The code for sequence prediction is located in the `Ress_GLRP/` folder, while the main entry point is `main_run.py`. The training, testing, and prediction pipeline is implemented in `processor.py`, with data loading handled by `dataloader.py`. The core network architecture is defined in `GLRP.py`. Ablation studies for key components (VAE framework, graph network, and sequential structure) are provided in `Ablation_models.py`, and several baseline models (LSTM, GRU, Seq2Seq, TCN, Transformer) are included in `Compared_models.py`. Utility functions, mainly for metric calculation, are in `utils.py`, and a simple visualization script is in `visualization.py`. Outside this folder, the `D_TCPA.py` file is used for calculating ship-ship risk values based on the prediction results.
 
 
 ## Environment Setup
