@@ -46,5 +46,5 @@ If you find this repository useful in your research, please consider citing the 
 ```
 
 ## Contact
-If you have any queries or are interested in developing collaborations and communications, please contact me via email: kaisen.yang@connect.polyu.hk (Yang Kaisen)
+If you have any queries or are interested in developing collaborations and communications, please contact me via email: kaisen.yang@connect.polyu.hk (Yang Kaisen).
 
