@@ -1,4 +1,4 @@
-# SS-GLMP
+## RESS_GLMP
 
 This is the implementation code for the paper "Enhancing Risk Perception by Integrating Ship Interactions in Multi-Ship Encounters: A Graph-Based Learning Method".
 
@@ -8,7 +8,7 @@ Based on the output of the motion prediction, we present codes for DCPA and TCPA
 
 
 
-# Environment Setup
+## Environment Setup
 
 **System Requirements**
 
@@ -25,3 +25,25 @@ Based on the output of the motion prediction, we present codes for DCPA and TCPA
 - pytorch_tcn==1.2.3
 - matplotlib == 3.7.2
 - torch-geometric == 2.3.2
+
+<img src="https://github.com/KaysenWB/OE-GMLTP/blob/main/Figure03.jpg?raw=true" width="95%" height="95%">
+
+Presentation of prediction results, which are based on one month's AIS data for Victoria, Hong Kong.
+
+
+## Citation
+If you find this repository useful in your research, please consider citing the following papers:
+```
+@article{yang2025enhancing,
+  title={Enhancing risk perception by integrating ship interactions in multi-ship encounters: A Graph-based Learning method},
+  author={Yang, Kaisen and Yang, Dong and Lu, Yuxu},
+  journal={Reliability Engineering \& System Safety},
+  pages={111150},
+  year={2025},
+  publisher={Elsevier}
+}
+```
+
+## Contact
+If you have any questions, feel free to contact Haoyi Zhou through Email (kaisen.yang@connect.polyu.hk). Pull requests are highly welcomed.
+
