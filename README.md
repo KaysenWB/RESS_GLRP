@@ -6,6 +6,9 @@ Implementation and performance comparison of several common deep learning networ
 
 Based on the output of the motion prediction, we present codes for DCPA and TCPA to calculate and measure the error, serving the subsequent risk perception.
 
+## Code Description
+
+The code for sequence prediction is located in the **`Ress_GLRP/`** folder, while the main entry point is **`main_run.py`**. The training, testing, and prediction pipeline is implemented in **`processor.py`**, with data loading handled by **`dataloader.py`**. The core network architecture is defined in **`GLRP.py`**. Ablation studies for key components (VAE framework, graph network, and sequential structure) are provided in **`Ablation_models.py`**, and several baseline models (LSTM, GRU, Seq2Seq, TCN, Transformer) are included in **`Compared_models.py`**. Utility functions, mainly for metric calculation, are in **`utils.py`**, and a simple visualization script is in **`visualization.py`**. Outside this folder, the **`D_TCPA.py`** file is used for calculating ship-ship risk values based on the prediction results.
 
 
 ## Environment Setup
@@ -26,9 +29,11 @@ Based on the output of the motion prediction, we present codes for DCPA and TCPA
 - matplotlib == 3.7.2
 - torch-geometric == 2.3.2
 
-<img src="https://github.com/KaysenWB/OE-GMLTP/blob/main/Figure03.jpg?raw=true" width="95%" height="95%">
+## Network Structure
+<img src="https://github.com/KaysenWB/RESS_GLRP/blob/main/Figures/Figure03.jpg?raw=true" width="95%" height="95%">
 
-Presentation of prediction results, which are based on one month's AIS data for Victoria, Hong Kong.
+## Result
+<img src="https://github.com/KaysenWB/RESS_GLRP/blob/main/Figures/Figure08.jpg?raw=true" width="95%" height="95%">
 
 
 ## Citation
