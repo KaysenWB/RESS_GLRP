@@ -1,20 +1,34 @@
-# GLRP: Interaction-Aware Graph Learning for Multi-Ship Risk Perception
+<h1 align="center">GLRP</h1>
 
 <p align="center">
-  <a href="https://doi.org/10.1016/j.ress.2025.111150"><img src="https://img.shields.io/badge/RESS-2025-8A2BE2" alt="RESS 2025"></a>
-  <a href="https://doi.org/10.1016/j.ress.2025.111150"><img src="https://img.shields.io/badge/DOI-10.1016%2Fj.ress.2025.111150-blue" alt="DOI"></a>
-  <img src="https://img.shields.io/badge/Python-3.9-3776AB" alt="Python 3.9">
-  <img src="https://img.shields.io/badge/PyTorch-2.8.0-EE4C2C" alt="PyTorch 2.8.0">
-  <a href="License"><img src="https://img.shields.io/badge/License-Apache--2.0-green" alt="Apache-2.0 License"></a>
+  <strong>Interaction-Aware Multi-Ship Trajectory Prediction for Reliable Future Risk Perception</strong>
 </p>
 
-Official PyTorch implementation of **“Enhancing Risk Perception by Integrating Ship Interactions in Multi-Ship Encounters: A Graph-Based Learning Method”**, published in *Reliability Engineering & System Safety* (2025).
+<p align="center">
+  Official PyTorch implementation of the <em>Reliability Engineering &amp; System Safety</em> paper<br>
+  <a href="https://doi.org/10.1016/j.ress.2025.111150"><em>Enhancing Risk Perception by Integrating Ship Interactions in Multi-Ship Encounters: A Graph-Based Learning Method</em></a>
+</p>
+
+<p align="center">
+  <a href="https://doi.org/10.1016/j.ress.2025.111150"><img src="https://img.shields.io/badge/Paper-RESS-2878B5" alt="Paper: RESS"></a>
+  <a href="https://doi.org/10.1016/j.ress.2025.111150"><img src="https://img.shields.io/badge/DOI-10.1016%2Fj.ress.2025.111150-A51C30" alt="DOI"></a>
+  <img src="https://img.shields.io/badge/Python-3.9-3776AB" alt="Python 3.9">
+  <img src="https://img.shields.io/badge/PyTorch-implementation-EE4C2C" alt="PyTorch implementation">
+  <a href="License"><img src="https://img.shields.io/badge/License-Apache--2.0-2E8B57" alt="Apache-2.0 License"></a>
+</p>
+
+<p align="center">
+  <a href="#highlights">Highlights</a> ·
+  <a href="#main-results">Results</a> ·
+  <a href="#quick-start">Quick start</a> ·
+  <a href="#citation">Citation</a>
+</p>
+
+---
 
 **GLRP** connects multi-ship interaction modeling, probabilistic trajectory prediction, and future collision-risk perception in one pipeline. Given AIS trajectories and time-varying ship-interaction graphs, it predicts multiple plausible future motions and derives ship-to-ship **DCPA** and **TCPA** for safer, interaction-aware navigation decisions.
 
-[[Paper](https://doi.org/10.1016/j.ress.2025.111150)] [[ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0951832025003515)] [[AIS preprocessing](https://github.com/KaysenWB/AIS-Process)] [[Citation](#citation)]
-
-## Why GLRP?
+## Highlights
 
 Sequence models can learn how an individual ship moves, but they do not explicitly explain how nearby ships alter one another's future actions. This limitation is especially important in dense or crossing traffic, where a small trajectory error can lead to a misleading assessment of future collision risk.
 
@@ -24,15 +38,6 @@ GLRP addresses this gap through four components:
 - **Interaction-aware spatial modeling:** a two-layer graph convolutional encoder exchanges information between nearby ships.
 - **Uncertainty-aware prediction:** a variational graph auto-encoder (VGAE) samples latent interaction responses and generates multiple plausible futures.
 - **Risk-oriented output:** predicted longitude, latitude, speed over ground (SOG), and course over ground (COG) are converted into future DCPA/TCPA risk indicators.
-
-```mermaid
-flowchart LR
-    A["AIS trajectories<br/>lon, lat, SOG, COG"] --> B["Self-attention<br/>temporal dependencies"]
-    G["Dynamic interaction graph"] --> C["VGAE<br/>spatial dependencies + uncertainty"]
-    B --> C
-    C --> D["K future trajectories"]
-    D --> E["DCPA / TCPA<br/>future risk perception"]
-```
 
 ## Network architecture
 
@@ -113,7 +118,7 @@ adjacency:  [T, N, N]  # time-varying ship-interaction weights
 
 In the paper, ships within 0.8 nautical miles are connected and their inverse distance is used as the interaction weight.
 
-## Installation
+## Quick start
 
 The experiments were conducted with Python 3.9 and PyTorch. A convenient environment setup is:
 
