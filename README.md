@@ -99,6 +99,9 @@ RESS_GLRP/
     ├── Ablation_models.py     # Component-level ablation variants
     ├── utils.py               # Losses and ADE/FDE/SOG/COG metrics
     └── visualization.py       # Trajectory visualization utilities
+└── SampleData/
+    ├── raw_ais.csv            # Raw AIS example
+    └── processed.cpkl         # the 5 examples of input data
 ```
 
 ## Dataset and preprocessing
